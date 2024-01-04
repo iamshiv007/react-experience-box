@@ -1,0 +1,29 @@
+.#{$rpe-namespace}__role-and-fromto-wrapper {
+  &-theme--light {
+    color: #718096;
+  }
+  &-theme--dark {
+    color: #a0aec0;
+  }
+}
+
+.#{$rpe-namespace}__role {
+  font-weight: 600;
+}
+
+.#{$rpe-namespace}__location-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: #3b82f6;
+}
+
+.#{$rpe-namespace}__role-fromto-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    @media #{$rpe-mobile} {
+      display: block;
+    }
+  }

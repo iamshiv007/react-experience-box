@@ -2,15 +2,25 @@ import React from 'react';
 import { LocationSvg } from '../icons';
 import { Default } from '../utils';
 
-export const CompanyLocation = () => {
+interface ICompanyLocation {
+  companyName: string;
+  location?: string;
+}
+
+export const CompanyLocation = ({
+  companyName,
+  location
+}: ICompanyLocation) => {
   return (
     <div
-      className={`${Default.CSS_NAMESPACE}__company-name-and-location-wrapper`}
+      className={`${Default.CSS_NAMESPACE}__company-location-wrapper`}
     >
-      <p className={`${Default.CSS_NAMESPACE}__company-name`}>GOOD TECH MIND</p>
-      <p className={`${Default.CSS_NAMESPACE}__location-wrapper`}>
-        <LocationSvg /> Kolkata, India
-      </p>
+      <p className={`${Default.CSS_NAMESPACE}__company-name`}>{companyName}</p>
+      {location && (
+        <p className={`${Default.CSS_NAMESPACE}__location-wrapper`}>
+          <LocationSvg /> {location}
+        </p>
+      )}
     </div>
   );
 };

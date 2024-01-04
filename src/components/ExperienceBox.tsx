@@ -6,7 +6,14 @@ import { RoleFromto } from './RoleFromto';
 import { Details } from './Details';
 import { ArrowBtn } from './ArrowBtn';
 
-export const ExperienceBox: FC<IExperienceBoxProps> = ({ theme = 'light' }) => {
+export const ExperienceBox: FC<IExperienceBoxProps> = ({
+  companyName,
+  location,
+  role,
+  fromTo,
+  details,
+  theme = 'light'
+}) => {
   return (
     <div
       className={`${Default.CSS_NAMESPACE}__main-container ${Default.CSS_NAMESPACE}__main-container-theme--${theme}`}
@@ -15,11 +22,11 @@ export const ExperienceBox: FC<IExperienceBoxProps> = ({ theme = 'light' }) => {
       <div
         className={`${Default.CSS_NAMESPACE}__container ${Default.CSS_NAMESPACE}__container-theme--${theme}`}
       >
-        <CompanyLocation />
+        <CompanyLocation companyName={companyName} location={location} />
 
-        <RoleFromto theme={theme} />
+        <RoleFromto role={role} fromTo={fromTo} theme={theme} />
 
-        <Details />
+        <Details details={details} />
       </div>
 
       <ArrowBtn theme={theme} />

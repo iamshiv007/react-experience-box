@@ -19,12 +19,3 @@
     box-shadow: 0 1px 3px 0 var(--experience-shadow-dark);
   }
 }
-
-.#{$rpe-namespace}__role-and-fromto-wrapper {
-  &-theme--light {
-    color: #718096;
-  }
-  &-theme--dark {
-    color: #a0aec0;
-  }
-}

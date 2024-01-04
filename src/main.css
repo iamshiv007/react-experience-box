@@ -30,20 +30,6 @@
   border: 1px solid var(--experience-border-dark);
   box-shadow: 0 1px 3px 0 var(--experience-shadow-dark); }
 
-.Portfolio-Experience__role-and-fromto-wrapper-theme--light {
-  color: #718096; }
-
-.Portfolio-Experience__role-and-fromto-wrapper-theme--dark {
-  color: #a0aec0; }
-
-.Portfolio-Experience__company-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--company-name-color); }
-  @media only screen and (max-width: 480px) {
-    .Portfolio-Experience__company-name {
-      font-size: 1.25rem; } }
-
 .Portfolio-Experience__main-container {
   align-items: flex-end;
   display: flex;
@@ -51,7 +37,8 @@
   padding: 1rem; }
   @media only screen and (max-width: 480px) {
     .Portfolio-Experience__main-container {
-      display: block; } }
+      display: block;
+      padding: 0.5rem; } }
 
 .Portfolio-Experience__container {
   cursor: pointer;
@@ -62,22 +49,36 @@
     .Portfolio-Experience__container {
       width: 100%; } }
 
-.Portfolio-Experience__company-name-and-location-wrapper {
+.Portfolio-Experience__down-arrow {
+  overflow: hidden; }
+
+.Portfolio-Experience__down-arrow-path-theme--light {
+  fill: var(--experience-color-dark); }
+
+.Portfolio-Experience__down-arrow-path-theme--dark {
+  fill: var(--experience-color-light); }
+
+.Portfolio-Experience__company-location-wrapper {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem; }
+  @media only screen and (max-width: 480px) {
+    .Portfolio-Experience__company-location-wrapper {
+      display: block; } }
 
-.Portfolio-Experience__role-and-fromto-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-top: 0.5rem; }
+.Portfolio-Experience__company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--company-name-color); }
+  @media only screen and (max-width: 480px) {
+    .Portfolio-Experience__company-name {
+      font-size: 1.25rem; } }
 
-.Portfolio-Experience__details {
-  margin-top: 0.5rem;
-  text-align: justify;
-  overflow: hidden;
-  color: #4a5568; }
+.Portfolio-Experience__role-and-fromto-wrapper-theme--light {
+  color: #718096; }
+
+.Portfolio-Experience__role-and-fromto-wrapper-theme--dark {
+  color: #a0aec0; }
 
 .Portfolio-Experience__role {
   font-weight: 600; }
@@ -88,11 +89,17 @@
   align-items: center;
   color: #3b82f6; }
 
-.Portfolio-Experience__down-arrow {
-  overflow: hidden; }
+.Portfolio-Experience__role-fromto-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem; }
+  @media only screen and (max-width: 480px) {
+    .Portfolio-Experience__role-fromto-wrapper {
+      display: block; } }
 
-.Portfolio-Experience__down-arrow-path-theme--light {
-  fill: var(--experience-color-dark); }
-
-.Portfolio-Experience__down-arrow-path-theme--dark {
-  fill: var(--experience-color-light); }
+.Portfolio-Experience__details {
+  margin-top: 0.5rem;
+  text-align: justify;
+  overflow: hidden;
+  color: #4a5568; }

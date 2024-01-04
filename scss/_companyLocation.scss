@@ -1,0 +1,18 @@
+.#{$rpe-namespace}__company-location-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  @media #{$rpe-mobile} {
+    display: block;
+  }
+}
+
+.#{$rpe-namespace}__company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--company-name-color);
+
+  @media #{$rpe-mobile} {
+    font-size: 1.25rem;
+  }
+}

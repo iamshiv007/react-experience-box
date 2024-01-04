@@ -1,13 +1,19 @@
 import React from 'react';
 import { Default } from '../utils';
 
-export const RoleFromto = ({ theme }: { theme: string }) => {
+interface IRoleFromto {
+  role?: string;
+  fromTo?: string;
+  theme: string;
+}
+
+export const RoleFromto = ({ role, fromTo, theme }: IRoleFromto) => {
   return (
     <div
-      className={`${Default.CSS_NAMESPACE}__role-and-fromto-wrapper ${Default.CSS_NAMESPACE}__role-and-fromto-wrapper-theme--${theme}`}
+      className={`${Default.CSS_NAMESPACE}__role-fromto-wrapper ${Default.CSS_NAMESPACE}__role-and-fromto-wrapper-theme--${theme}`}
     >
-      <p className={`${Default.CSS_NAMESPACE}__role`}>MERN STACK INTERN</p>
-      <p>Aprile 2023 - June 2023</p>
+      <p className={`${Default.CSS_NAMESPACE}__role`}>{role}</p>
+      <p>{fromTo}</p>
     </div>
   );
 };
