@@ -1,0 +1,98 @@
+:root {
+  --experience-color-light: white;
+  --experience-color-dark: black;
+  --experience-text-light: black;
+  --experience-text-dark: white;
+  --experience-shadow-light: rgba(213, 216, 220, 0.15);
+  --experience-shadow-dark: rgba(74, 85, 104, 0.15);
+  --experience-border-light: #d5d8dc;
+  --experience-border-dark: #4a5568;
+  --company-name-color: #e53e3e; }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.Portfolio-Experience__main-container-theme--light {
+  color: var(--experience-text-light);
+  background-color: var(--experience-color-light); }
+
+.Portfolio-Experience__main-container-theme--dark {
+  color: var(--experience-text-dark);
+  background-color: var(--experience-color-dark); }
+
+.Portfolio-Experience__container-theme--light {
+  border: 1px solid var(--experience-border-light);
+  box-shadow: 0 1px 3px 0 var(--experience-shadow-light); }
+
+.Portfolio-Experience__container-theme--dark {
+  border: 1px solid var(--experience-border-dark);
+  box-shadow: 0 1px 3px 0 var(--experience-shadow-dark); }
+
+.Portfolio-Experience__role-and-fromto-wrapper-theme--light {
+  color: #718096; }
+
+.Portfolio-Experience__role-and-fromto-wrapper-theme--dark {
+  color: #a0aec0; }
+
+.Portfolio-Experience__company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--company-name-color); }
+  @media only screen and (max-width: 480px) {
+    .Portfolio-Experience__company-name {
+      font-size: 1.25rem; } }
+
+.Portfolio-Experience__main-container {
+  align-items: flex-end;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem; }
+  @media only screen and (max-width: 480px) {
+    .Portfolio-Experience__main-container {
+      display: block; } }
+
+.Portfolio-Experience__container {
+  cursor: pointer;
+  padding: 1.25rem;
+  border-radius: 0.125rem;
+  width: 45%; }
+  @media only screen and (max-width: 480px) {
+    .Portfolio-Experience__container {
+      width: 100%; } }
+
+.Portfolio-Experience__company-name-and-location-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem; }
+
+.Portfolio-Experience__role-and-fromto-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem; }
+
+.Portfolio-Experience__details {
+  margin-top: 0.5rem;
+  text-align: justify;
+  overflow: hidden;
+  color: #4a5568; }
+
+.Portfolio-Experience__role {
+  font-weight: 600; }
+
+.Portfolio-Experience__location-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: #3b82f6; }
+
+.Portfolio-Experience__down-arrow {
+  overflow: hidden; }
+
+.Portfolio-Experience__down-arrow-path-theme--light {
+  fill: var(--experience-color-dark); }
+
+.Portfolio-Experience__down-arrow-path-theme--dark {
+  fill: var(--experience-color-light); }

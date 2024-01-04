@@ -1,0 +1,12 @@
+.#{$rpe-namespace}__down-arrow {
+  overflow: hidden;
+}
+
+.#{$rpe-namespace}__down-arrow-path {
+  &-theme--light {
+    fill: var(--experience-color-dark);
+  }
+  &-theme--dark {
+    fill: var(--experience-color-light);
+  }
+}
