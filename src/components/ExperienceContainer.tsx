@@ -4,14 +4,20 @@ import { ExperienceBox } from './ExperienceBox';
 
 export const ExperienceContainer = ({
   experiences,
-  theme = 'light'
+  theme = 'light',
+  direction = 'sideBySide'
 }: IExperienceContainerProps) => {
   return (
     <div>
       {experiences.map((expe, i) => {
         return (
           <div key={i}>
-            <ExperienceBox {...expe} theme={theme} right={i % 2 !== 0} />
+            <ExperienceBox
+              direction={direction}
+              {...expe}
+              theme={theme}
+              even={i % 2 === 0}
+            />
           </div>
         );
       })}

@@ -10,11 +10,14 @@
 }
 
 .#{$rpe-namespace}__main-container {
-  &-flex-end {
+  &-flex--end {
     justify-content: flex-end;
   }
-  &flex-start {
+  &-flex--start {
     justify-content: flex-start;
+  }
+  &-flex--center {
+    justify-content: center;
   }
 }
 
@@ -22,7 +25,7 @@
   cursor: pointer;
   padding: 1.25rem;
   border-radius: 0.125rem;
-  width: 44%;
+  width: 45%;
 
   @media #{$rpe-mobile} {
     width: 100%;

@@ -12,8 +12,9 @@ export const ExperienceBox: FC<IExperienceBoxProps> = ({
   role,
   fromTo,
   details,
+  even,
   theme = 'light',
-  right
+  direction
 }) => {
   const [selectedDetails, setSelectedDetails] = useState<string | ReactNode>(
     ''
@@ -21,11 +22,30 @@ export const ExperienceBox: FC<IExperienceBoxProps> = ({
 
   return (
     <div
-      className={`${Default.CSS_NAMESPACE}__main-container ${
-        right
-          ? `${Default.CSS_NAMESPACE}__main-container-flex-end`
-          : `${Default.CSS_NAMESPACE}__main-container-flex-start`
-      } ${Default.CSS_NAMESPACE}__main-container-theme--${theme}`}
+      className={`${Default.CSS_NAMESPACE}__main-container
+      ${
+        direction === 'sideBySide'
+          ? even
+            ? `${Default.CSS_NAMESPACE}__main-container-flex--end`
+            : `${Default.CSS_NAMESPACE}__main-container-flex--start`
+          : ''
+      }
+      ${
+        direction === 'left'
+          ? `${Default.CSS_NAMESPACE}__main-container-flex--start`
+          : ''
+      }
+      ${
+        direction === 'right'
+          ? `${Default.CSS_NAMESPACE}__main-container-flex--end`
+          : ''
+      } 
+      ${
+        direction === 'center'
+          ? `${Default.CSS_NAMESPACE}__main-container-flex--center`
+          : ''
+      } 
+          ${Default.CSS_NAMESPACE}__main-container-theme--${theme}`}
       key="Good Tech MIND"
     >
       <div

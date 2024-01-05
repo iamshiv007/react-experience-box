@@ -40,17 +40,20 @@
       display: block;
       padding: 0.5rem; } }
 
-.Portfolio-Experience__main-container-flex-end {
+.Portfolio-Experience__main-container-flex--end {
   justify-content: flex-end; }
 
-.Portfolio-Experience__main-containerflex-start {
+.Portfolio-Experience__main-container-flex--start {
   justify-content: flex-start; }
+
+.Portfolio-Experience__main-container-flex--center {
+  justify-content: center; }
 
 .Portfolio-Experience__container {
   cursor: pointer;
   padding: 1.25rem;
   border-radius: 0.125rem;
-  width: 44%; }
+  width: 45%; }
   @media only screen and (max-width: 480px) {
     .Portfolio-Experience__container {
       width: 100%; } }
