@@ -1,7 +1,7 @@
 {
-  "name": "react-experience-box",
+  "name": "react-portfolio-experience",
   "version": "1.0.0",
-  "description": "This is react-toastify clone project",
+  "description": "Use build in portfolio-experience ui for react",
   "main": "index.js",
   "author": "Shivraj",
   "license": "MIT",
@@ -51,5 +51,5 @@
   "dependencies": {
     "dlx": "^0.2.1"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@1.22.21"
 }

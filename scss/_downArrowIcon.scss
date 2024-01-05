@@ -1,5 +1,6 @@
 .#{$rpe-namespace}__down-arrow {
   overflow: hidden;
+  transition: all 0.5s ease-in-out;
 }
 
 .#{$rpe-namespace}__down-arrow-path {
@@ -9,4 +10,8 @@
   &-theme--dark {
     fill: var(--experience-color-light);
   }
+}
+
+.#{$rpe-namespace}__down-arrow-transform--upper {
+  transform: rotate(180deg);
 }

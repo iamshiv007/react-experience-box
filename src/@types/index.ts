@@ -8,5 +8,11 @@ export interface IExperienceBoxProps {
   role?: string;
   fromTo?: string;
   details: string | ReactNode;
+  right?: boolean;
+  theme?: ITheme;
+}
+
+export interface IExperienceContainerProps {
+  experiences: IExperienceBoxProps[];
   theme?: ITheme;
 }

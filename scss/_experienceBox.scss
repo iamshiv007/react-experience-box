@@ -1,6 +1,6 @@
 .#{$rpe-namespace}__main-container {
-  align-items: flex-end;
   display: flex;
+  align-items: end;
   gap: 0.5rem;
   padding: 1rem;
   @media #{$rpe-mobile} {
@@ -9,11 +9,20 @@
   }
 }
 
+.#{$rpe-namespace}__main-container {
+  &-flex-end {
+    justify-content: flex-end;
+  }
+  &flex-start {
+    justify-content: flex-start;
+  }
+}
+
 .#{$rpe-namespace}__container {
   cursor: pointer;
   padding: 1.25rem;
   border-radius: 0.125rem;
-  width: 45%;
+  width: 44%;
 
   @media #{$rpe-mobile} {
     width: 100%;

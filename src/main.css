@@ -31,8 +31,8 @@
   box-shadow: 0 1px 3px 0 var(--experience-shadow-dark); }
 
 .Portfolio-Experience__main-container {
-  align-items: flex-end;
   display: flex;
+  align-items: end;
   gap: 0.5rem;
   padding: 1rem; }
   @media only screen and (max-width: 480px) {
@@ -40,23 +40,33 @@
       display: block;
       padding: 0.5rem; } }
 
+.Portfolio-Experience__main-container-flex-end {
+  justify-content: flex-end; }
+
+.Portfolio-Experience__main-containerflex-start {
+  justify-content: flex-start; }
+
 .Portfolio-Experience__container {
   cursor: pointer;
   padding: 1.25rem;
   border-radius: 0.125rem;
-  width: 45%; }
+  width: 44%; }
   @media only screen and (max-width: 480px) {
     .Portfolio-Experience__container {
       width: 100%; } }
 
 .Portfolio-Experience__down-arrow {
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 0.5s ease-in-out; }
 
 .Portfolio-Experience__down-arrow-path-theme--light {
   fill: var(--experience-color-dark); }
 
 .Portfolio-Experience__down-arrow-path-theme--dark {
   fill: var(--experience-color-light); }
+
+.Portfolio-Experience__down-arrow-transform--upper {
+  transform: rotate(180deg); }
 
 .Portfolio-Experience__company-location-wrapper {
   display: flex;
@@ -102,4 +112,11 @@
   margin-top: 0.5rem;
   text-align: justify;
   overflow: hidden;
-  color: #4a5568; }
+  color: #4a5568;
+  transition: all 0.5s ease-in-out; }
+
+.Portfolio-Experience__details--expand {
+  max-height: 400px; }
+
+.Portfolio-Experience__details--collapse {
+  max-height: 0; }

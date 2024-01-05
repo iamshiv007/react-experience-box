@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode, useState } from 'react';
 import { Default } from '../utils';
 import { IExperienceBoxProps } from '../@types';
 import { CompanyLocation } from './CompanyLocation';
@@ -12,11 +12,20 @@ export const ExperienceBox: FC<IExperienceBoxProps> = ({
   role,
   fromTo,
   details,
-  theme = 'light'
+  theme = 'light',
+  right
 }) => {
+  const [selectedDetails, setSelectedDetails] = useState<string | ReactNode>(
+    ''
+  );
+
   return (
     <div
-      className={`${Default.CSS_NAMESPACE}__main-container ${Default.CSS_NAMESPACE}__main-container-theme--${theme}`}
+      className={`${Default.CSS_NAMESPACE}__main-container ${
+        right
+          ? `${Default.CSS_NAMESPACE}__main-container-flex-end`
+          : `${Default.CSS_NAMESPACE}__main-container-flex-start`
+      } ${Default.CSS_NAMESPACE}__main-container-theme--${theme}`}
       key="Good Tech MIND"
     >
       <div
@@ -26,10 +35,15 @@ export const ExperienceBox: FC<IExperienceBoxProps> = ({
 
         <RoleFromto role={role} fromTo={fromTo} theme={theme} />
 
-        <Details details={details} />
+        <Details details={details} selectedDetails={selectedDetails} />
       </div>
 
-      <ArrowBtn theme={theme} />
+      <ArrowBtn
+        details={details}
+        selectedDetails={selectedDetails}
+        theme={theme}
+        setSelectedDetails={setSelectedDetails}
+      />
     </div>
   );
 };
